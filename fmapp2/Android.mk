@@ -27,6 +27,11 @@ LOCAL_SRC_FILES +=  $(call all-java-files-under, src/com/caf/hc_utils)
 else
 LOCAL_SRC_FILES +=  $(call all-java-files-under, src/com/caf/utils)
 endif
+
+LOCAL_AAPT_FLAGS := \
+    --auto-add-overlay
+
+LOCAL_USE_AAPT2 := true
 LOCAL_PACKAGE_NAME := FM2
 LOCAL_CERTIFICATE := platform
 LOCAL_JNI_SHARED_LIBRARIES := libqcomfm_jni
